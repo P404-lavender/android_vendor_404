@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     Aperture \
     RepainterServicePriv
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
+
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet

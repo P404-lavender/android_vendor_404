@@ -23,3 +23,9 @@ function repopick() {
     T=$(gettop)
     $T/vendor/404/build/tools/repopick.py $@
 }
+
+# Builder
+export KBUILD_BUILD_USER=xenxynon
+export KBUILD_BUILD_HOST=Server
+export BUILD_USERNAME=xenxynon
+export BUILD_HOSTNAME=Server

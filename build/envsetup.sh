@@ -1,3 +1,5 @@
+rm -rf *
+repo sync
 function __print_p404_functions_help() {
 cat <<EOF
 Additional functions:

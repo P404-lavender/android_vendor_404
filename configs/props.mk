@@ -38,7 +38,7 @@ endif
 
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    arm64.memtag.process.system_server=off
+    persist.arm64.memtag.system_server=off
 
 # Enable IORap I/O Prefetching
 PRODUCT_SYSTEM_EXT_PROPERTIES += \

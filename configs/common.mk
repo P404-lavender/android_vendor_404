@@ -32,6 +32,9 @@ include vendor/404/configs/packages.mk
 # Props
 include vendor/404/configs/props.mk
 
+# SEPolicy
+$(call inherit-product, device/404/sepolicy/P404Sepolicy.mk)
+
 # Android Beam
 PRODUCT_COPY_FILES += \
     vendor/404/configs/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml

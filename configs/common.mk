@@ -96,12 +96,11 @@ $(call inherit-product-if-exists, device/qcom/common/common.mk)
 # Include definitions for Snapdragon Clang
 $(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
 
+ifneq ($(TARGET_NO_TELEPHONY), true)
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
     vendor/404/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
-
-# Telephony
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+endif
 
 # World APN list
 PRODUCT_COPY_FILES += \

@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
 # Include our Qualcomm Board configuration.
 include device/qcom/common/BoardConfigQcom.mk
+endif
 
 # Kernel
 include vendor/404/configs/BoardConfigKernel.mk

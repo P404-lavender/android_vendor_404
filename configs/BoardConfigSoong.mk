@@ -19,6 +19,7 @@ SOONG_CONFIG_NAMESPACES += p404GlobalVars
 SOONG_CONFIG_p404GlobalVars += \
     aapt_version_code \
     needs_camera_boottime \
+    powershare_node \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
@@ -31,6 +32,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 # Soong value variables
 SOONG_CONFIG_p404GlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_p404GlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_p404GlobalVars_powershare_node := $(TARGET_POWERSHARE_NODE)
 SOONG_CONFIG_p404GlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_p404GlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_p404GlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)

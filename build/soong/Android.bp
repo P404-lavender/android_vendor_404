@@ -18,6 +18,22 @@ needs_camera_boottime {
 }
 
 soong_config_module_type {
+    name: "powershare_node",
+    module_type: "cc_defaults",
+    config_namespace: "p404GlobalVars",
+    value_variables: ["powershare_node"],
+    properties: ["cppflags"],
+}
+powershare_node {
+    name: "powershare_node_defaults",
+    soong_config_variables: {
+        powershare_node: {
+            cppflags: ["-DPOWERSHARE_NODE=\"%s\""],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "target_process_sdk_version_overrides",
     module_type: "cc_defaults",
     config_namespace: "p404GlobalVars",
@@ -105,6 +121,26 @@ surfaceflinger_udfps_lib {
         target_surfaceflinger_udfps_lib: {
             cppflags: ["-DTARGET_PROVIDES_UDFPS_LIB"],
             whole_static_libs: ["%s"],
+        },
+    },
+}
+
+cc_defaults {
+    name: "p404_aidl_defaults",
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wextra",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    target: {
+        host: {
+            cflags: [
+                "-O0",
+                "-g",
+            ],
         },
     },
 }

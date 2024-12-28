@@ -81,6 +81,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/overlays/404/overlay
 PRODUCT_VENDOR_MOVE_ENABLED := true
 DISABLE_EAP_PROXY := true
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+     vendor/404/vendor_framework_compatibility_matrix.xml
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
